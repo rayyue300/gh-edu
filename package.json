@@ -19,5 +19,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://rayyue300.github.io/whedu"
+  "homepage": "https://rayyue300.github.io/whedu/build/"
 }
