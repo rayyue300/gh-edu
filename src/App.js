@@ -15,6 +15,9 @@ const Element = ScrollAnim.Element;
 const ScrollOverPack = ScrollAnim.OverPack;
 const EventListener = ScrollAnim.Event;
 const ScrollParallax = ScrollAnim.Parallax;
+
+var ReactFitText = require('react-fittext');
+
 //ScrollAnim.scrollScreen({scrollInterval: 600});
 class App extends React.Component {
   componentDidMount() {
@@ -59,25 +62,25 @@ class App extends React.Component {
           >
             允行教育
           </Link>
-          <Link className="nav-list" to="page1" showHeightActive={['10%', '60%']} toShowHeight
+          <Link className="nav-list" to="page1" showHeightActive={['10%', '70%']}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
           >
             創新教學
           </Link>
-          <Link className="nav-list" to="page2" showHeightActive={['60%', '50%']} toShowHeight
+          <Link className="nav-list" to="page2" showHeightActive={['10%', '70%']}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
           >
             學生成就
           </Link>
-          <Link className="nav-list" to="page3" offsetTop={100}
+          <Link className="nav-list" to="page3" showHeightActive={['10%', '70%']}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
           >
             專業團隊
           </Link>
-          <Link className="nav-list" to="page3" offsetTop={100}
+          <Link className="nav-list" to="page4" showHeightActive={['10%', '70%']}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
           >
@@ -101,10 +104,14 @@ class App extends React.Component {
           style={{ transform: 'translateY(0px)' }}
         >
           <div className="page-title" key="title">
-            <p>允行教育</p>
+            <ReactFitText compressor={0.4} minFontSize={56}>
+              <p>允行教育</p>
+            </ReactFitText>
           </div>
           <div className="page-description" key="c">
-            <p>我們因才施教，對症下藥，學生成績都出類拔萃</p>
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>我們因才施教，對症下藥，學生成績都出類拔萃</p>
+            </ReactFitText>
           </div>
           <div className="page-buttons">
             <Button bsSize="large">聯絡我們</Button>
@@ -119,34 +126,70 @@ class App extends React.Component {
           <img src={this.img_p0teacher} />
         </ScrollParallax>
       </Element>
-      <ScrollOverPack id="page1" className="page1">
+
+      <ScrollOverPack id="page1" className="pack-page page1" replay="true">
         <TweenOne className="tween-one" key="0" animation={{ opacity: 1 }}>
-          默認進入與出場
+          <div class="p1_title">
+            <ReactFitText compressor={0.4} minFontSize={56}>
+              <p>創新教學</p>
+            </ReactFitText>
+          </div>
         </TweenOne>
-        <QueueAnim key="1">
-          <div key="0" className="demo"></div>
-          <div key="1" className="demo" style={{ backgroundColor: '#F38EAD' }}></div>
-          <div key="2" className="demo"></div>
-          <div key="3" className="demo"></div>
+        <QueueAnim key="1" interval="250">
+          <div key="0" className="demo p1_demo">
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>從遊戲中學習，學習愉快有效</p>
+            </ReactFitText>
+          </div>
+          <div key="1" className="demo p1_demo">
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>引入原創手機應用，隨時複習所學</p>
+            </ReactFitText>
+          </div>
+          <div key="2" className="demo p1_demo">
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>附有網上教室，學生可隨時發問</p>
+            </ReactFitText>
+          </div>
         </QueueAnim>
       </ScrollOverPack>
 
       <ScrollOverPack
         className="pack-page page2"
         style={{ backgroundColor: '#0098CE' }}
-        always={false}
+        replay={true}
+        always={true}
         id="page2"
       >
-        <div className="page2-title">只进入一次</div>
-        <Animate key="0" transitionName="fade" transitionAppear>
-          <div className="demo2"></div>
-        </Animate>
-        <TweenOne
-          className="demo2"
-          animation={{ y: 0, opacity: 1 }}
-          key="1"
-          style={{ transform: 'translateY(100px)', opacity: 0 }}
-        />
+        <TweenOne className="tween-one" key="0" animation={{ opacity: 1 }}>
+          <div class="p2_title">
+            <ReactFitText compressor={0.4} minFontSize={56}>
+              <p>學生成就</p>
+            </ReactFitText>
+          </div>
+        </TweenOne>
+        <QueueAnim key="1" interval="500">
+          <TweenOne
+            className="demo2 p2_demo"
+            animation={{ x: 0, opacity: 1 }}
+            key="1"
+            style={{ transform: 'translateX(-300px)', opacity: 0.5 }}
+          >
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>90&#37;學生獲香城三大錄取</p>
+            </ReactFitText>
+          </TweenOne>
+          <TweenOne
+            className="demo2 p2_demo"
+            animation={{ x: 0, opacity: 1 }}
+            key="2"
+            style={{ transform: 'translateX(300px)', opacity: 0.5 }}
+          >
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>連續四年有本校學生成為香城狀元</p>
+            </ReactFitText>
+          </TweenOne>
+        </QueueAnim>
       </ScrollOverPack>
 
       <ScrollOverPack
@@ -169,6 +212,33 @@ class App extends React.Component {
           key="1"
           style={{ transform: 'translateY(100px)', opacity: 0 }}
         />
+      </ScrollOverPack>
+
+      <ScrollOverPack id="page4" className="pack-page page1" replay="true">
+        <TweenOne className="tween-one" key="0" animation={{ opacity: 1 }}>
+          <div class="p1_title">
+            <ReactFitText compressor={0.4} minFontSize={56}>
+              <p>馬上報名</p>
+            </ReactFitText>
+          </div>
+        </TweenOne>
+        <QueueAnim key="1" interval="250">
+          <div key="0" className="demo">
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>從遊戲中學習，學習愉快有效</p>
+            </ReactFitText>
+          </div>
+          <div key="1" className="demo">
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>引入原創手機應用，隨時複習所學</p>
+            </ReactFitText>
+          </div>
+          <div key="2" className="demo">
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>附有網上教室，學生可隨時發問</p>
+            </ReactFitText>
+          </div>
+        </QueueAnim>
       </ScrollOverPack>
     </div>);
   }

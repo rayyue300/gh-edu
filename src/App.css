@@ -90,6 +90,9 @@ body {
     border-left: 5px solid #FF9800;
     background-color: rgba(255, 255, 255, 0.6);
     color: #212121;
+    width: 40%;
+    min-width: 420px;
+    height: auto;
     padding: 5px 50px;
     text-align: left;
     display: inline-block;
@@ -101,6 +104,9 @@ body {
     }
   .page-description p {
     font-size: 40px;
+    width: 60%;
+    min-width: 420px;
+    height: auto;
     padding: 5px 50px;
     background-color: rgba(255, 255, 255, 0.6);
     color: #212121;
@@ -120,4 +126,59 @@ body {
   top: 200px;
   right: -10%;
   z-index: 1;
+}
+
+/* TEACHING PAGE */
+.page1 {
+  background-image: url('./page1_bg.jpg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p1_title {
+  width: 40%;
+  min-width: 420px;
+  height: auto;
+  border-top: 5px solid #FF9800;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 50px;
+  text-align: center;
+  display: inline-block;
+  color: #212121;
+}
+.p1_demo {
+  width: 65%;
+  min-width: 420px;
+  height: 75px;
+  line-height: 75px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+/* ACHIEVEMENT PAGE */
+.page2 {
+  background-image: url('./page2_bg.jpg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p2_title {
+  width: 40%;
+  min-width: 420px;
+  height: auto;
+  border-top: 5px solid #03A9F4;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px 50px;
+  text-align: center;
+  display: inline-block;
+  color: #FFFFFF;
+}
+.p2_demo {
+  width: 65%;
+  min-width: 420px;
+  height: 75px;
+  line-height: 75px;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #FFFFFF;
 }
