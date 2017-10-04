@@ -1,10 +1,12 @@
 {
-  "main.css": "static/css/main.e763643a.css",
-  "main.css.map": "static/css/main.e763643a.css.map",
-  "main.js": "static/js/main.dcc6d1db.js",
-  "main.js.map": "static/js/main.dcc6d1db.js.map",
+  "main.css": "static/css/main.5de602e3.css",
+  "main.css.map": "static/css/main.5de602e3.css.map",
+  "main.js": "static/js/main.8979d8b2.js",
+  "main.js.map": "static/js/main.8979d8b2.js.map",
   "static/media/page0_bg.jpg": "static/media/page0_bg.c392c3fa.jpg",
   "static/media/page0_teacher.fw.png": "static/media/page0_teacher.fw.5b1bc3fe.png",
   "static/media/page1_bg.jpg": "static/media/page1_bg.6984a173.jpg",
-  "static/media/page2_bg.jpg": "static/media/page2_bg.4979efec.jpg"
+  "static/media/page2_bg.jpg": "static/media/page2_bg.4979efec.jpg",
+  "static/media/page3_bg.jpg": "static/media/page3_bg.b0222829.jpg",
+  "static/media/page3_teacher_1.fw.png": "static/media/page3_teacher_1.fw.1e2d4ae3.png"
 }
