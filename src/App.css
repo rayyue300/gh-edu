@@ -167,7 +167,7 @@ body {
   min-width: 420px;
   height: auto;
   border-top: 5px solid #03A9F4;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 5px 50px;
   text-align: center;
   display: inline-block;
@@ -182,3 +182,42 @@ body {
   text-align: center;
   color: #FFFFFF;
 }
+
+/* TEAM PAGE */
+.page3 {
+  background-image: url('./page3_bg.jpg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  .page3 .tween-one { padding-bottom: 50px; }
+.p3_title {
+  width: 40%;
+  min-width: 420px;
+  height: auto;
+  border-top: 5px solid #03A9F4;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 50px;
+  text-align: center;
+  display: inline-block;
+  color: #FFFFFF;
+}
+.p3_demo {
+  width: 30%;
+  min-width: 420px;
+  height: 270px;
+  float: left;
+  margin: 10px 1.5%;
+  padding: 10px;
+  line-height: 75px;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #FFFFFF;
+}
+  .p3_demo_pic1 {
+    width: 150px;
+    height: 150px;
+    margin: 0px auto;
+    background-image: url('./page3_teacher_1.fw.png');
+    background-size: cover;
+  }

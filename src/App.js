@@ -195,23 +195,52 @@ class App extends React.Component {
       <ScrollOverPack
         className="pack-page page3"
         style={{ backgroundColor: '#174270' }}
-        playScale={0.8}
+        replay={true}
+        always={true}
         id="page3"
       >
-        <TweenOne animation={{ opacity: 1 }} style={{ opacity: 0 }} key="title"
-          className="page2-title"
-        >
-          在页面80％时进入
+        <TweenOne className="tween-one" key="0" animation={{ opacity: 1 }}>
+          <div class="p3_title">
+            <ReactFitText compressor={0.4} minFontSize={56}>
+              <p>專業團隊</p>
+            </ReactFitText>
+          </div>
         </TweenOne>
-        <Animate key="0" transitionName="fade" transitionAppear>
-          <div className="demo"></div>
-        </Animate>
-        <TweenOne
-          className="demo"
-          animation={{ y: 0, opacity: 1 }}
-          key="1"
-          style={{ transform: 'translateY(100px)', opacity: 0 }}
-        />
+        <QueueAnim key="1" interval="500">
+          <TweenOne
+            className="demo2 p3_demo"
+            animation={{ x: 0, opacity: 1 }}
+            key="1"
+            style={{ transform: 'translateX(-300px)', opacity: 0.5 }}
+          >
+            <div class="p3_demo_pic1">
+
+            </div>
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>課程總監 - 修端</p>
+            </ReactFitText>
+          </TweenOne>
+          <TweenOne
+            className="demo2 p3_demo"
+            animation={{ x: 0, opacity: 1 }}
+            key="2"
+            style={{ transform: 'translateX(300px)', opacity: 0.5 }}
+          >
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>連續四年有本校學生成為香城狀元</p>
+            </ReactFitText>
+          </TweenOne>
+          <TweenOne
+            className="demo2 p3_demo"
+            animation={{ x: 0, opacity: 1 }}
+            key="2"
+            style={{ transform: 'translateX(300px)', opacity: 0.5 }}
+          >
+            <ReactFitText compressor={2.4} minFontSize={26}>
+              <p>連續四年有本校學生成為香城狀元</p>
+            </ReactFitText>
+          </TweenOne>
+        </QueueAnim>
       </ScrollOverPack>
 
       <ScrollOverPack id="page4" className="pack-page page1" replay="true">
