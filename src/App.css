@@ -195,19 +195,23 @@ body {
   width: 40%;
   min-width: 420px;
   height: auto;
-  border-top: 5px solid #03A9F4;
+  border-top: 5px solid #4CAF50;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 5px 50px;
   text-align: center;
   display: inline-block;
   color: #FFFFFF;
 }
+.p3_content { 
+  width: 80%;
+  margin: 0px auto;
+}
 .p3_demo {
   width: 30%;
-  min-width: 420px;
+  min-width: 270px;
   height: 270px;
   float: left;
-  margin: 10px 1.5%;
+  margin: 10px 1%;
   padding: 10px;
   line-height: 75px;
   background-color: rgba(0, 0, 0, 0.4);
@@ -215,9 +219,34 @@ body {
   color: #FFFFFF;
 }
   .p3_demo_pic1 {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0px auto;
     background-image: url('./page3_teacher_1.fw.png');
     background-size: cover;
   }
+  .p3_demo_pic2 {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    background-image: url('./page3_teacher_2.fw.png');
+    background-size: cover;
+  }
+  .p3_demo_pic3 {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    background-image: url('./page3_teacher_3.fw.png');
+    background-size: cover;
+  }
+  .p3_demo p {
+    height: 50px;
+    line-height: 50px;
+  }
+
+.page4 {
+  height: 300px;
+  background-color: #212121;
+  line-height: 300px;
+  text-align: center;
+}

@@ -74,13 +74,15 @@ class App extends React.Component {
           >
             學生成就
           </Link>
-          <Link className="nav-list" to="page3" showHeightActive={['10%', '70%']}
+          <Link className="nav-list" to="page3" showHeightActive={['10%', '40%']}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
           >
             專業團隊
           </Link>
-          <Link className="nav-list" to="page4" showHeightActive={['10%', '70%']}
+          <Link className="nav-list" to="page4" 
+            showHeightActive={['0%', '100%']}
+            offsetTop={468}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
           >
@@ -206,69 +208,46 @@ class App extends React.Component {
             </ReactFitText>
           </div>
         </TweenOne>
-        <QueueAnim key="1" interval="500">
+        <QueueAnim className="p3_content" key="1" interval="0">
           <TweenOne
             className="demo2 p3_demo"
-            animation={{ x: 0, opacity: 1 }}
+            animation={{ y: 0, opacity: 1 }}
             key="1"
-            style={{ transform: 'translateX(-300px)', opacity: 0.5 }}
+            style={{ transform: 'translateY(300px)', opacity: 0.5 }}
           >
-            <div class="p3_demo_pic1">
-
-            </div>
+            <div class="p3_demo_pic1"></div>
             <ReactFitText compressor={2.4} minFontSize={26}>
-              <p>課程總監 - 修端</p>
+              <p>星級導師 - 修端</p>
             </ReactFitText>
           </TweenOne>
           <TweenOne
             className="demo2 p3_demo"
-            animation={{ x: 0, opacity: 1 }}
+            animation={{ y: 0, opacity: 1 }}
             key="2"
-            style={{ transform: 'translateX(300px)', opacity: 0.5 }}
+            style={{ transform: 'translateY(300px)', opacity: 0.5 }}
           >
+            <div class="p3_demo_pic2"></div>
             <ReactFitText compressor={2.4} minFontSize={26}>
-              <p>連續四年有本校學生成為香城狀元</p>
+              <p>課程總監 - 允行</p>
             </ReactFitText>
           </TweenOne>
           <TweenOne
             className="demo2 p3_demo"
-            animation={{ x: 0, opacity: 1 }}
+            animation={{ y: 0, opacity: 1 }}
             key="2"
-            style={{ transform: 'translateX(300px)', opacity: 0.5 }}
+            style={{ transform: 'translateY(300px)', opacity: 0.5 }}
           >
+            <div class="p3_demo_pic3"></div>
             <ReactFitText compressor={2.4} minFontSize={26}>
-              <p>連續四年有本校學生成為香城狀元</p>
+              <p>星級導師 - 一心</p>
             </ReactFitText>
           </TweenOne>
         </QueueAnim>
       </ScrollOverPack>
 
-      <ScrollOverPack id="page4" className="pack-page page1" replay="true">
-        <TweenOne className="tween-one" key="0" animation={{ opacity: 1 }}>
-          <div class="p1_title">
-            <ReactFitText compressor={0.4} minFontSize={56}>
-              <p>馬上報名</p>
-            </ReactFitText>
-          </div>
-        </TweenOne>
-        <QueueAnim key="1" interval="250">
-          <div key="0" className="demo">
-            <ReactFitText compressor={2.4} minFontSize={26}>
-              <p>從遊戲中學習，學習愉快有效</p>
-            </ReactFitText>
-          </div>
-          <div key="1" className="demo">
-            <ReactFitText compressor={2.4} minFontSize={26}>
-              <p>引入原創手機應用，隨時複習所學</p>
-            </ReactFitText>
-          </div>
-          <div key="2" className="demo">
-            <ReactFitText compressor={2.4} minFontSize={26}>
-              <p>附有網上教室，學生可隨時發問</p>
-            </ReactFitText>
-          </div>
-        </QueueAnim>
-      </ScrollOverPack>
+      <div id="page4" className="pack-page page4" replay="true">
+        <Button bsSize="large" bsStyle="success">馬上報名</Button>
+      </div>
     </div>);
   }
 }
